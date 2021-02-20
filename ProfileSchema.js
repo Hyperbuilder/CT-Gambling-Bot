@@ -9,8 +9,10 @@ const ProfileSchema = mongoose.Schema({
     userID: reqString,
     brass: {
         type: Number,
-        require: true
-    }
+        require: true,
+        default: 1000
+    },
+    bank: { type: Number }
 })
 
 module.exports = mongoose.model('profiles', ProfileSchema)
